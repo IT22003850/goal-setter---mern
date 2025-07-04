@@ -3,6 +3,10 @@ const dotenv = require('dotenv').config();
 const port = process.env.PORT || 5000 ;
 const goalRoutes = require('./routes/goalRoutes');
 const { errorHandler } = require('./middlewares/errorMiddleware');
+const colors = require('colors')
+const connectDB = require('./config/db');
+
+connectDB();
 
 const app = express();
 
@@ -15,5 +19,5 @@ app.use('/api/goals', goalRoutes);
 app.use(errorHandler);
 
 app.listen(port, () => {
-  console.log(`server is listning to port: ${port}`);
+  console.log(`server is listning to port: ${port}`.blue);
 });
