@@ -5,6 +5,10 @@ const goalRoutes = require('./routes/goalRoutes');
 
 const app = express();
 
+//middlewares to accept body data
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+
 app.use('/api/goals', goalRoutes);
 
 app.listen(port, () => {

@@ -3,6 +3,7 @@ const getGoals = (req, res) => {
 };
 
 const setGoal = (req, res) => {
+    console.log(req.body);
     res.status(201).json({message: 'Set goal'});
 };
 
