@@ -6,6 +6,7 @@ const { errorHandler } = require('./middlewares/errorMiddleware');
 const colors = require('colors')
 const connectDB = require('./config/db');
 
+//mongoDb config
 connectDB();
 
 const app = express();
