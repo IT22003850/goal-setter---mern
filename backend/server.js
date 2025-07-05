@@ -1,10 +1,11 @@
 const express = require("express");
 const dotenv = require('dotenv').config();
-const port = process.env.PORT || 5000 ;
 const goalRoutes = require('./routes/goalRoutes');
 const { errorHandler } = require('./middlewares/errorMiddleware');
 const colors = require('colors')
 const connectDB = require('./config/db');
+
+const port = process.env.PORT || 5000 ;
 
 //mongoDb config
 connectDB();
